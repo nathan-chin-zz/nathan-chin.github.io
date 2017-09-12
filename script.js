@@ -46,7 +46,9 @@ $(document).ready(function(){
 			arrowDisplay(6);
 			numScroll = Math.round(maxScroll / $('.tools-container').width() + 1);
 			$('.tools-container').scrollLeft(0);
-			$('#start-nav').css('background-color', '#4A4E50');
+			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+				$('#start-nav').css('background-color', '#4A4E50');
+			}
 			aboutHeight = $('#about-title').offset().top + 24;
 			hobbiesHeight = $('#hobbies-title').offset().top + 24;
 			projectsHeight = $('#projects-title').offset().top + 24;
@@ -93,7 +95,9 @@ $(document).ready(function(){
 	arrowDisplay(6);
 	numScroll = Math.round(maxScroll / $('.tools-container').width() + 1);
 	$('.tools-container').scrollLeft(0);
-	$('#start-nav').css('background-color', '#4A4E50');
+	if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+		$('#start-nav').css('background-color', '#4A4E50');
+	}
 	aboutHeight = $('#about-title').offset().top + 24;
 	hobbiesHeight = $('#hobbies-title').offset().top + 24;
 	projectsHeight = $('#projects-title').offset().top + 24;
@@ -379,7 +383,7 @@ $(document).ready(function(){
 			else{
 				$('#about-title').css('box-shadow', 'none');
 			}
-			
+			/*
 			clearSelectMenu();
 			if($('#contact-title')[0].getBoundingClientRect().top === -24){
 				$('#contact-nav').css('background-color', '#4A4E50');
@@ -395,13 +399,15 @@ $(document).ready(function(){
 			}
 			else{
 				$('#start-nav').css('background-color', '#4A4E50');
-			}
+			}*/
 
 		}, 100);
 		$('.nav-menu-item').click(function(){
 			clearSelectMenu();
-			$(this).css('background-color', '#4A4E50');
-			$(this).css('color', '#FAFAFA');
+			if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) )){
+				$(this).css('background-color', '#4A4E50');
+				$(this).css('color', '#FAFAFA');
+			}
 			setTimeout(function(){
 				$('#open-nav').css('left', '-280px');
 				$('#black-nav').fadeIn();
@@ -946,7 +952,10 @@ var stickTitles = function(position){
 		$('#about-title').removeClass(insert);
 		$('#contact-title').addClass(insert);
 		clearSelectMenu();
-		$('#contact-nav').css('background-color', '#4A4E50');
+		if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+			$('#contact-nav').css('background-color', '#4A4E50');
+		}
+		//$('#contact-nav').css('background-color', '#4A4E50');
 		if(insert === 'snapF'){
 			$('.no-intro-container').css('padding-top', titleHeight);
 		}
@@ -958,7 +967,10 @@ var stickTitles = function(position){
 		$('#contact-title').removeClass(insert);
 		$('#projects-title').addClass(insert);
 		clearSelectMenu();
-		$('#projects-nav').css('background-color', '#4A4E50');
+		if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+			$('#projects-nav').css('background-color', '#4A4E50');
+		}
+		//$('#projects-nav').css('background-color', '#4A4E50');
 		if(insert === 'snapF'){
 			$('.no-intro-container').css('padding-top', titleHeight);
 		}
@@ -970,7 +982,10 @@ var stickTitles = function(position){
 		$('#contact-title').removeClass(insert);
 		$('#hobbies-title').addClass(insert);
 		clearSelectMenu();
-		$('#hobbies-nav').css('background-color', '#4A4E50');
+		if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+			$('#hobbies-nav').css('background-color', '#4A4E50');
+		}
+		//$('#hobbies-nav').css('background-color', '#4A4E50');
 		if(insert === 'snapF'){
 			$('.no-intro-container').css('padding-top', titleHeight);
 		}
@@ -982,7 +997,9 @@ var stickTitles = function(position){
 		$('#contact-title').removeClass(insert);
 		$('#about-title').addClass(insert);
 		clearSelectMenu();
-		$('#about-nav').css('background-color', '#4A4E50');
+		if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+			$('#about-nav').css('background-color', '#4A4E50');
+		}
 		if(insert === 'snapF'){
 			$('.no-intro-container').css('padding-top', '0');
 		}
@@ -994,7 +1011,10 @@ var stickTitles = function(position){
 		$('#projects-title').removeClass(insert);
 		$('#contact-title').removeClass(insert);
 		clearSelectMenu();
-		$('#start-nav').css('background-color', '#4A4E50');
+		if(!( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) ){
+			$('#start-nav').css('background-color', '#4A4E50');
+		}
+		//$('#start-nav').css('background-color', '#4A4E50');
 		if(insert === 'snapF'){
 			$('.no-intro-container').css('padding-top', '0');
 		}
