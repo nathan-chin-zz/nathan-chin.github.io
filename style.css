@@ -1,7 +1,7 @@
 .message {
-    visibility: hidden;
+    visibility: visible;
 }
 
 .hidden {
-    visibility: visible;
+    visibility: hidden;
 }

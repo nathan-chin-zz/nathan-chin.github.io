@@ -2,7 +2,7 @@
 /*global $, jQuery, alert*/
 
 $(document).ready(function () {
-    $('.previous').hover(function () {
+    $('.hover').hover(function () {
         $('.message').toggleClass('hidden');
     });
 });
