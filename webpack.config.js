@@ -1,40 +1,41 @@
+const path = require('path');
+
 // States the rules for the babel-loader
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const htmlPlugin = new HtmlWebPackPlugin({
-    template: "./src/index.html",
-    filename: "./index.html"
-});
-
 module.exports = {
+    // Tell webpack to begin building dependency graph from this fiile
+    entry: path.join(__dirname, 'src', 'components', 'App.jsx'),
+    // Place the output in the 'build' directory
+    output: {
+        path: path.join(__dirname, 'build'),
+        filename: 'bundle.js',
+    },
     module: {
         rules: [
         {
-            test: /\.js$/,
+            // JS or JSX files should be parsed with Babel
+            test: /\.jsx?$/,
+            // Leave npm packages alone since most are pre-transpiled anyways
             exclude: /node_modules/,
             use: {
                 loader: "babel-loader"
             }
         },
         {
-            test: /\.css$/,
+            // SASS, SCSS, CSS files
+            test: /\.(sa|sc|c)ss$/,
             use: [
-                    {
-                        loader: "style-loader"
-                    },
-                    {
-                        loader: "css-loader",
-                        options: {
-                            modules: true,
-                            importLoaders: 1,
-                            localIdentName: "[name]_[local]_[hash:base64]",
-                            sourceMap: true,
-                            minimize: true
-                        }
-                    }
-            ]
-        }
+                'style-loader',
+                'css-loader',
+                'sass-loader',
+            ],
+          }
         ]
     },
-    plugins: [htmlPlugin]
+    plugins: [
+        new HtmlWebPackPlugin({
+            template: path.join(__dirname, 'public', 'index.html'),
+        })
+    ]
 };
