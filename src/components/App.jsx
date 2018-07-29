@@ -1,11 +1,19 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
+import Section from './Section.jsx';
+
+import styles from '../style/App.scss';
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <h1>This is a React app</h1>
+            <div className="main">
+                <Section className="main-intro" title="Intro" />
+                <Section className="about" title="About" />
+                <Section className="experience" title="Experience" />
+                <Section className="projects" title="Projects" />
+                <Section className="skills" title="Skills" />
+                <Section className="contact" title="Contact" />
             </div>
         );
     }

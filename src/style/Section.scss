@@ -1,0 +1,122 @@
+@import '../constants/theme';
+
+.main {
+    min-height: 40rem;
+
+    & .angle1 {
+        position: absolute;
+        left: -20%;
+        bottom: -10px;
+        width: 150%;
+        min-height: 41.5rem;
+        z-index: 3;
+        opacity: 0.7;
+        transform: rotate(-5deg);
+    }
+
+    & .angle2 {
+        position: absolute;
+        left: -30%;
+        bottom: -8px;
+        width: 180%;
+        min-height: 42rem;
+        z-index: 2;
+        opacity: 0.25;
+        transform: rotate(-13deg);
+    }
+
+    & .angle3 {
+        position: absolute;
+        left: -30%;
+        bottom: -10px;
+        width: 180%;
+        min-height: 43rem;
+        z-index: 1;
+        opacity: 0.08;
+        transform: skewY(-24deg);
+    }
+
+    .intro {
+        position: relative;
+        background: $white;
+        z-index: 1;
+    }
+
+    .about {
+        position: relative;
+        background: $about-background;
+        background: $about-background-gradient;
+        z-index: 5;
+
+        & .angle1 {
+            background: $about-background;
+            background: $about-background-gradient;
+        }
+
+        & .angle2 {
+            background: $about-background;
+            background: $about-background-gradient;
+        }
+
+        & .angle3 {
+            background: $about-background;
+            background: $about-background-gradient;
+        }
+    }
+    
+    .experience {
+        position: relative;
+        background: $white;
+        z-index: 1;
+    }
+    
+    .projects {
+        position: relative;
+        background: $projects-background;
+        background: $projects-background-gradient;
+        z-index: 5;
+
+        & .angle1 {
+            background: $projects-background;
+            background: $projects-background-gradient;
+        }
+
+        & .angle2 {
+            background: $projects-background;
+            background: $projects-background-gradient;
+        }
+
+        & .angle3 {
+            background: $projects-background;
+            background: $projects-background-gradient;
+        }
+    }
+    
+    .skills {
+        position: relative;
+        background: $white;
+        z-index: 1;
+    }
+    
+    .contact {
+        position: relative;
+        background: $contact-background;
+        background: $contact-background-gradient;
+        z-index: 5;
+
+        & .angle1 {
+            background: $contact-background;
+            background: $contact-background-gradient;
+        }
+
+        & .angle2 {
+            background: $contact-background;
+            background: $contact-background-gradient;
+        }
+
+        & .angle3 {
+            background: $contact-background;
+            background: $contact-background-gradient;
+        }
+    }
+}
