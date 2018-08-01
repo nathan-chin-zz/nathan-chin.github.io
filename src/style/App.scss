@@ -9,3 +9,16 @@ body {
     background-color: $white;
     overflow-x: hidden;
 }
+
+.text {
+    font-family: $default-font-family;
+    color: $default-text;
+
+    &-light {
+        font-weight: $font-light;
+    }
+
+    &-extrabold {
+        font-weight: $font-extrabold;
+    }
+}

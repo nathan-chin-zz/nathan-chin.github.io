@@ -10,7 +10,7 @@
         width: 150%;
         min-height: 41.5rem;
         z-index: 3;
-        opacity: 0.7;
+        opacity: $angle-opacity-1;
         transform: rotate(-5deg);
     }
 
@@ -21,7 +21,7 @@
         width: 180%;
         min-height: 42rem;
         z-index: 2;
-        opacity: 0.25;
+        opacity: $angle-opacity-2;
         transform: rotate(-13deg);
     }
 
@@ -32,7 +32,7 @@
         width: 180%;
         min-height: 43rem;
         z-index: 1;
-        opacity: 0.08;
+        opacity: $angle-opacity-3;
         transform: skewY(-24deg);
     }
 
