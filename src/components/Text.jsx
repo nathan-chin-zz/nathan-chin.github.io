@@ -10,7 +10,7 @@ export default class Text extends Component {
 
     render() {
         return (
-            <p className={`text text-${this.props.weight.toLowerCase()}`}>
+            <p className={`text ${this.props.className}`}>
                 {this.props.children}
             </p>
         );
@@ -20,5 +20,5 @@ export default class Text extends Component {
 
 Text.propTypes = {
     children: PropTypes.node.isRequired,
-    weight: PropTypes.string,
+    className: PropTypes.string,
 };

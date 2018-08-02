@@ -22,3 +22,29 @@ body {
         font-weight: $font-extrabold;
     }
 }
+
+.title-text-container {
+    margin-left: 5%;
+}
+
+.title-text-1 {
+    font-weight: $font-light;
+    font-size: 2rem;
+    margin-left: 6px;
+}
+
+.title-text-2 {
+    font-weight: $font-extrabold;
+    font-size: 8rem;
+    margin: -30px 0;
+}
+
+.labels-animation-container {
+    display: flex;
+    margin: -5px 0 0 6px;
+
+    > * {
+        font-size: 2rem;
+        font-weight: $font-light;
+    }
+}

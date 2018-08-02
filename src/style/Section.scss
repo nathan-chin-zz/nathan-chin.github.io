@@ -37,6 +37,8 @@
     }
 
     .intro {
+        display: flex;
+        align-items: center;
         position: relative;
         background: $white;
         z-index: 1;

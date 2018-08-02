@@ -38,6 +38,7 @@
     "node-sass": "^4.9.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
+    "react-typist": "^2.0.4",
     "sass-loader": "^7.0.3"
   }
 }
