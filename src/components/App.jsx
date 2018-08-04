@@ -8,6 +8,9 @@ class App extends Component {
     render() {
         return (
             <div className="main">
+                <div className="nav-angle-1" />
+                <div className="nav-angle-2" />
+                <div className="nav-angle-3" />
                 <Section className="main-intro" title="Intro" />
                 <Section className="about" title="About" />
                 <Section className="experience" title="Experience" />

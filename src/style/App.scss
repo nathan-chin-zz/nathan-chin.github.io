@@ -23,6 +23,46 @@ body {
     }
 }
 
+.nav-angle-1 {
+    position: fixed;
+    top: 0;
+    right: -12rem;
+    height: 16rem;
+    width: 25rem;
+    z-index: 1000;
+    background-color: $header-background;
+    transform-origin: top right;
+    transform: rotate(35deg);
+    opacity: $header-opacity-1;
+}
+
+.nav-angle-2 {
+    position: fixed;
+    top: 0;
+    right: -8rem;
+    height: 12rem;
+    width: 30rem;
+    z-index: 1000;
+    background-color: $header-background;
+    transform-origin: top right;
+    transform: rotate(24deg);
+    opacity: $header-opacity-2;
+}
+
+.nav-angle-3 {
+    position: fixed;
+    top: 0;
+    right: -8rem;
+    height: 9rem;
+    width: 50rem;
+    z-index: 1000;
+    background-color: $header-background;
+    transform-origin: top right;
+    transform: rotate(12deg);
+    opacity: $header-opacity-3;
+}
+
+
 .title-text-container {
     margin-left: 5%;
 }
