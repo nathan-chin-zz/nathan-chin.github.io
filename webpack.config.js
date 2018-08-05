@@ -31,7 +31,22 @@ module.exports = {
                 'css-loader',
                 'sass-loader',
             ],
-          }
+        },
+        // Bottom two loaders allow the reference to an asset in code and add it to the code
+        { // Loads assets into files
+            test: /\.(jpe?g|png|gif)$/,
+            use: [{
+                // Inline if smaller than 10 KB, otherwise load as a file
+                loader: 'url-loader',
+                options: {
+                    limit: 10000
+                }
+            }]
+        },
+        { // Tries to inline assets as dataURIs
+            test: /\.(eot|svg|ttf|woff2?|otf)$/,
+            use: 'file-loader'
+        }
         ]
     },
     plugins: [

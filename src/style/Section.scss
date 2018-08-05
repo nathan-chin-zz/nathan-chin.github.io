@@ -9,6 +9,7 @@
         bottom: -10px;
         width: 150%;
         min-height: 41.5rem;
+        height: 100%;
         z-index: 3;
         opacity: $angle-opacity-1;
         transform: rotate(-5deg);
@@ -20,6 +21,7 @@
         bottom: -8px;
         width: 180%;
         min-height: 42rem;
+        height: 100%;
         z-index: 2;
         opacity: $angle-opacity-2;
         transform: rotate(-13deg);
@@ -31,6 +33,7 @@
         bottom: -10px;
         width: 180%;
         min-height: 43rem;
+        height: 100%;
         z-index: 1;
         opacity: $angle-opacity-3;
         transform: skewY(-24deg);
@@ -48,6 +51,7 @@
         position: relative;
         background: $about-background;
         background: $about-background-gradient;
+        padding-left: 4rem;
         z-index: 5;
 
         & .angle1 {
@@ -69,6 +73,7 @@
     .experience {
         position: relative;
         background: $white;
+        padding-left: 4rem;
         z-index: 1;
     }
     
@@ -76,6 +81,7 @@
         position: relative;
         background: $projects-background;
         background: $projects-background-gradient;
+        padding-left: 4rem;
         z-index: 5;
 
         & .angle1 {
@@ -97,6 +103,7 @@
     .skills {
         position: relative;
         background: $white;
+        padding-left: 4rem;
         z-index: 1;
     }
     
@@ -104,6 +111,7 @@
         position: relative;
         background: $contact-background;
         background: $contact-background-gradient;
+        padding-left: 4rem;
         z-index: 5;
 
         & .angle1 {
@@ -121,4 +129,11 @@
             background: $contact-background-gradient;
         }
     }
+}
+
+.divider {
+    height: 1px;
+    width: 100%;
+    margin: 1rem 0;
+    background: $gray;
 }
