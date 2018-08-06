@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text.jsx';
 import universityLogo from '../assets/UT_logo.png';
+import aboutLogo from '../assets/About_Logo.png';
 
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
@@ -135,6 +136,7 @@ export default class Section extends Component {
                 <div className="angle1"></div>
                 <div className="angle2"></div>
                 <div className="angle3"></div>
+                { this.props.children }
                 { this.renderSection() }
             </div>
         )
@@ -143,5 +145,6 @@ export default class Section extends Component {
 }
 
 Section.propTypes = {
+    children: PropTypes.node,
     title: PropTypes.string,
 };

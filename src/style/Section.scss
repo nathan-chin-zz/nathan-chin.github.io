@@ -137,3 +137,29 @@
     margin: 1rem 0;
     background: $gray;
 }
+
+.dot-sidebar {
+    width: 10rem;
+    display: flex;
+    float: right;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+}
+
+.nav-container {
+    height: 8rem;
+    width: 10rem;
+    padding-left: 4.5rem;
+    position: fixed;
+    top: 30%;
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2000;
+
+    > *:hover {
+        font-weight: $font-bold;
+        cursor: pointer;
+    }
+}

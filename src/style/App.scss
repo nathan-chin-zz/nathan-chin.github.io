@@ -6,6 +6,7 @@
 }
 
 body {
+    height: 100%;
     background-color: $white;
     overflow-x: hidden;
 }
@@ -45,49 +46,84 @@ body {
     }
 }
 
-
-.nav-angle-1 {
+.nav-sidebar {
+    height: 100%;
+    width: 10rem;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    right: 0;
+    z-index: 2000;
+
+    .nav-container {
+        height: 8rem;
+        width: 10rem;
+        padding-left: 4.5rem;
+        position: fixed;
+        top: 32%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 2000;
+
+        > *:hover {
+            font-weight: $font-bold;
+            cursor: pointer;
+        }
+    }
+}
+
+.section-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background: darkcyan;
+}
+
+.corner-angle-1 {
+    position: absolute;
     top: 0;
     right: -12rem;
-    height: 16rem;
-    width: 25rem;
+    height: 14rem; //16rem;
+    width: 36rem; //25rem;
     z-index: 1000;
     background-color: $header-background;
     transform-origin: top right;
-    transform: rotate(35deg);
+    transform: rotate(26deg); //rotate(35deg);
     opacity: $header-opacity-1;
 }
 
-.nav-angle-2 {
-    position: fixed;
+.corner-angle-2 {
+    position: absolute;
     top: 0;
     right: -8rem;
-    height: 12rem;
-    width: 30rem;
+    height: 9rem; //12rem;
+    width: 36rem; //30rem;
     z-index: 1000;
     background-color: $header-background;
     transform-origin: top right;
-    transform: rotate(24deg);
+    transform: rotate(14deg); //rotate(24deg);
     opacity: $header-opacity-2;
 }
 
-.nav-angle-3 {
-    position: fixed;
+.corner-angle-3 {
+    position: absolute;
     top: 0;
     right: -8rem;
-    height: 9rem;
+    height: 7rem; //9rem;
     width: 50rem;
     z-index: 1000;
     background-color: $header-background;
     transform-origin: top right;
-    transform: rotate(12deg);
+    transform: rotate(8deg); //rotate(12deg);
     opacity: $header-opacity-3;
 }
 
 
 .title-text-container {
-    margin-left: 5%;
+    margin-left: 4rem;
 }
 
 .title-text-1 {
@@ -117,13 +153,14 @@ body {
     padding-top: 3rem;
 
     .about-title {
+        display: inline-block;
         font-size: 4rem;
         color: $white;
     }
 
     .about-description {
         background: $white;
-        margin: 0 5% 5% 0;
+        margin: 0 10rem 4rem 0;
         padding: 2rem;
         border-radius: 1px;
         box-shadow: $card-shadow;
