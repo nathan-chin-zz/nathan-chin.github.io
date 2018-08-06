@@ -38,17 +38,19 @@ export default class Section extends Component {
                 <div className="about-description">
                     <Text weight="regular">Hi, my name is Nathan Chin, and I'm a current third-year electrical and computer engineering student at The University of Texas at Austin</Text>
                     <div className="divider"/>
-                    <Text weight="bold">Education</Text>
+                    <Text weight="bold" size="1.5rem">Education</Text>
                     <div className="education-container">
                         <div className="school">
                             <img className="logo" src={universityLogo}/>
-                            <div>
-                            <Text weight="semibold">The University of Texas at Austin</Text>
-                            <Text weight="regular">B.S in Electrical and Computer Engineering<br/>Minor in Business Foundations<br/>2016-2020<br/>Primary technical core: Software Engineering<br/>Secondary technical core: Computer Architecture/Embedded Systems</Text>
+                            <div style={{ flex: 3 }}>
+                            <Text weight="semibold" size="1.25rem">THE UNIVERSITY OF TEXAS AT AUSTIN</Text>
+                            <Text weight="regular" size="1.25rem">Bachelor of Science: Electrical and Computer Engineering</Text>
+                            <Text weight="regular">Primary technical core: Software Engineering<br/>Secondary technical core: Computer Architecture/Embedded Systems<br/>Minor: Business Foundations</Text>
                             </div>
+                            <Text weight="regular">May 2020</Text>
                         </div>
                         <div className="coursework">
-                            <Text weight="semibold">Relevant Coursework</Text>
+                            <Text weight="semibold" size="1.25rem">Relevant Coursework</Text>
                             <Text weight="regular">
                             EE 460N: Computer Architecture (LC-3 Assembly, C)<br/>
                             EE 360C: Algorithms (Java)<br/>

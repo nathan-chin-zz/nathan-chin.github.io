@@ -10,7 +10,7 @@ export default class Text extends Component {
 
     render() {
         return (
-            <p className={`text ${this.props.className} text-${this.props.weight}`} onClick={this.props.onClick}>
+            <p className={`text ${this.props.className} text-${this.props.weight}`} style={{ fontSize: this.props.size }} onClick={this.props.onClick}>
                 {this.props.children}
             </p>
         );
@@ -23,4 +23,5 @@ Text.propTypes = {
     onClick: PropTypes.func,
     className: PropTypes.string,
     weight: PropTypes.string,
+    size: PropTypes.string,
 };
