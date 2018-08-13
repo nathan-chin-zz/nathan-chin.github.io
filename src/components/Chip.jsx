@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Text from './Text.jsx';
 
 import '../style/App.scss';
 
@@ -11,11 +12,10 @@ export default class Chip extends Component {
     render(){
         const style = {
             background: this.props.color,
-            height: this.props.size === 'small' ? "1rem" : "2rem",
         }
-        
+
         return (
-           <div style={style}>{this.props.label}</div>
+           <div className="chip" style={style}><Text weight="bold" display="inline" color="white">{this.props.label}</Text></div>
         );
     }
 }
@@ -23,5 +23,4 @@ export default class Chip extends Component {
 Chip.propTypes = {
     label: PropTypes.string,
     color: PropTypes.string,
-    size: PropTypes.string,
 }

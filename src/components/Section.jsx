@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text.jsx';
+import Chip from './Chip.jsx';
 import universityLogo from '../assets/UT_logo.png';
 import aboutLogo from '../assets/About_Logo.png';
 
@@ -40,42 +41,42 @@ export default class Section extends Component {
                     <div className="divider"/>
                     <Text weight="bold" size="1.5rem">Education</Text>
                     <div className="education-container">
-                        <div className="school">
-                            <img className="logo" src={universityLogo}/>
-                            <div style={{ flex: 3 }}>
+                        <img className="logo" src={universityLogo}/>
+                        <div className="school" style={{ marginRight: "4rem" }}>
                             <Text weight="semibold" size="1.25rem">THE UNIVERSITY OF TEXAS AT AUSTIN</Text>
                             <Text weight="regular" size="1.25rem">Bachelor of Science: Electrical and Computer Engineering</Text>
                             <Text weight="regular">Primary technical core: Software Engineering<br/>Secondary technical core: Computer Architecture/Embedded Systems<br/>Minor: Business Foundations</Text>
+                            <div className="coursework">
+                                <Text weight="semibold" size="1.25rem">Relevant Coursework</Text>
+                                <div><Text weight="regular" className="class-name">EE 460N: Computer Architecture</Text> <Chip label="C" color="#5a75ba"/> <Chip label="LC-3 ASSEMBLY" color="#25344c"/></div>
+                                <div><Text weight="regular" className="class-name">EE 360C: Algorithms</Text> <Chip label="JAVA" color="#ec2025"/> </div>
+                                <div><Text weight="regular" className="class-name">EE 107S: Intro to Python</Text> <Chip label="PYTHON" color="#ffd647"/> </div>
+                                <div><Text weight="regular" className="class-name">EE 119: Professional Development</Text></div>
+                                <div><Text weight="regular" className="class-name">EE 313: Linear Systems and Signals</Text> <Chip label="MATLAB" color="#f97e0f"/></div>
+                                <div><Text weight="regular" className="class-name">EE 312: Software Design & Implementation I</Text> <Chip label="C" color="#5a75ba"/> <Chip label="C++" color="#009688"/></div>
+                                <div><Text weight="regular" className="class-name">EE 107S: Intro to Linux</Text> <Chip label="BASH" color="#80b3ff"/> </div>
+                                <div><Text weight="regular" className="class-name">EE 411: Circuit Theory</Text></div>
+                                <div><Text weight="regular" className="class-name">EE 319K: Intro to Embedded Systems</Text> <Chip label="C" color="#5a75ba"/> <Chip label="LC-3 ASSEMBLY" color="#25344c"/> </div>
+                                <div><Text weight="regular" className="class-name">EE 316: Digital Logic Design</Text> <Chip label="VHDL" color="#000000"/></div>
+                                <div><Text weight="regular" className="class-name">EE 306: Intro to Computing</Text> <Chip label="LC-3 ASSEMBLY" color="#25344c"/> </div>
+                                <div><Text weight="regular" className="class-name">EE 302: Intro to Electrical Engineering</Text> <Chip label="LABVIEW" color="#90c584"/></div>
+                                <div><Text weight="regular" className="class-name">M 427J: Differential Equations with Linear Algebra</Text></div>
+                                <div><Text weight="regular" className="class-name">M 325K: Discrete Mathematics</Text></div>
+                                <div><Text weight="regular" className="class-name">M 340L: Matrices and Matrix Calculations</Text></div>
+                                <div><Text weight="regular" className="class-name">M 408D: Sequences, Series, and Multivariable Calculus</Text></div>
+                                <div><Text weight="regular" className="class-name">M 408C: Differential and Integral Calculus</Text></div>
+                                <div><Text weight="regular" className="class-name">LIN 353C: Computational Linguistics</Text> <Chip label="PYTHON" color="#ffd647"/> </div>
+                                <div><Text weight="regular" className="class-name">ACC 310F: Foundations of Accounting</Text></div>
+                                <div className="divider"/>
+                                <Text weight="semibold">Fall 2018</Text>
+                                <div><Text weight="regular" className="class-name">EE 422C: Software Design & Implementation II</Text> <Chip label="JAVA" color="#ec2025"/> </div>
+                                <div><Text weight="regular" className="class-name">EE 461S: Operating Systems</Text> <Chip label="C" color="#5a75ba"/> </div>
+                                <div><Text weight="regular" className="class-name">EE 333T: Engineering Communication</Text></div>
+                                <div><Text weight="regular" className="class-name">CMS 315M: Interpersonal Communication Theory</Text></div>
+                                <div><Text weight="regular" className="class-name">PED 104P: Tennis</Text></div>
                             </div>
-                            <Text weight="regular">May 2020</Text>
                         </div>
-                        <div className="coursework">
-                            <Text weight="semibold" size="1.25rem">Relevant Coursework</Text>
-                            <Text weight="regular">
-                            EE 460N: Computer Architecture (LC-3 Assembly, C)<br/>
-                            EE 360C: Algorithms (Java)<br/>
-                            EE 107S: Intro to Python (Python)<br/>
-                            EE 119: Professional Development<br/>
-                            EE 313: Linear Systems and Signals (MATLAB)<br/>
-                            EE 312: Software Design & Implementation I (C, C++)<br/>
-                            EE 107S: Intro to Linux (Bash)<br/>
-                            EE 411: Circuit Theory<br/>
-                            EE 319K: Intro to Embedded Systems (LC-3 Assembly, C)<br/>
-                            EE 316: Digital Logic Design (VHDL)<br/>
-                            EE 306: Intro to Computing (LC-3 Assembly)<br/>
-                            EE 302: Intro to Electrical Engineering (LabVIEW)<br/>
-
-                            M 427J: Differential Equations with Linear Algebra<br/>
-                            M 325K: Discrete Mathematics<br/>
-                            M 340L: Matrices and Matrix Calculations<br/>
-                            M 408D: Sequences, Series, and Multivariable Calculus<br/>
-                            M 408C: Differential and Integral Calculus<br/>
-
-                            LIN 353C: Computational Linguistics (Python)<br/>
-                            
-                            ACC 310F: Foundations of Accounting<br/>
-                            </Text>
-                        </div>
+                        <Text weight="regular">May 2020</Text>
                     </div>
                 </div>
             </div>

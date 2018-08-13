@@ -16,6 +16,12 @@ body {
     width: 60px;
     border-radius: 1px;
     padding: 5px 1rem 0 0;
+    position: -webkit-sticky;
+    position: -moz-sticky;
+    position: -ms-sticky;
+    position: -o-sticky;
+    position: sticky;
+    top: 20%;
 }
 
 .text {
@@ -45,6 +51,14 @@ body {
     &-extrabold {
         font-weight: $font-extrabold;
     }
+}
+
+.chip {
+    display: inline;
+    color: white;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    margin-left: 5px;
 }
 
 .nav-sidebar {
@@ -168,13 +182,19 @@ body {
 
         .education-container {
             margin-top: 1rem;
+            display: flex;
 
             .school {
                 display: flex;
+                flex-direction: column;
             }
 
             .coursework {
-                margin: 2rem 0 2rem 75px
+                margin: 2rem 0;
+
+                .class-name {
+                    display: inline-block;
+                }
             }
         }
     }

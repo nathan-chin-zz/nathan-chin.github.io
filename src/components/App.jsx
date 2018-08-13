@@ -15,7 +15,7 @@ class App extends Component {
 
         this.scrollTo = (element) => {
             Scroll.scroller.scrollTo(element, { duration: 1000, smooth: true });
-         }
+        }
 
         return (
             <div className="main">
