@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text.jsx';
 import Chip from './Chip.jsx';
+import Timeline from './Timeline.jsx';
+import Event from './Event.jsx';
 import universityLogo from '../assets/UT_logo.png';
 import aboutLogo from '../assets/About_Logo.png';
 
@@ -13,6 +15,15 @@ import '../style/Section.scss';
 export default class Section extends Component {
     constructor(props){
         super(props);
+
+        this.state = {
+            workExperience: true,
+        }
+    }
+
+    toggleExperience() {
+        let curr = this.state.workExperience;
+        this.setState({ workExperience: !curr });
     }
 
     renderIntro() {
@@ -85,11 +96,32 @@ export default class Section extends Component {
 
 
     renderExperience() {
-        return (
-            <div className="experience-container">
-                <Text className="experience-title" weight="extrabold">Experience</Text>
-            </div>
-        );
+        if (this.state.workExperience) {
+            return (
+                <div className="experience-container">
+                    <Text className="experience-title" weight="extrabold">Experience</Text>
+                    <div className="experience-switch" onClick={this.toggleExperience.bind(this)}>
+                        <div className="switch"/>
+                    </div>
+                    <Text weight="regular" className="timeline-title">Work Experience</Text>
+                    <Timeline>
+                        <Event/>
+                    </Timeline>
+                </div>
+            );
+        }
+        else {
+            return (
+                <div className="experience-container">
+                    <Text className="experience-title" weight="extrabold">Experience</Text>
+                    <div className="experience-switch" onClick={this.toggleExperience.bind(this)} style={{ justifyContent: "flex-end", background: "#FFD98C" }}>
+                        <div className="switch"/>
+                    </div>
+                    <Text weight="regular" className="timeline-title">Leadership Experience</Text>
+                    <Timeline/>
+                </div>
+            );
+        }
     }
 
     renderProjects() {
@@ -134,8 +166,9 @@ export default class Section extends Component {
     }
 
     render() {
+        const name = this.props.title.toLowerCase();
         return (
-            <div className={`main ${this.props.title.toLowerCase()}`}>
+            <div className={`main ${name} ${name === "experience" && !this.state.workExperience ? "dark" : ""}`}>
                 <div className="angle1"></div>
                 <div className="angle2"></div>
                 <div className="angle3"></div>

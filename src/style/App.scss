@@ -199,3 +199,43 @@ body {
         }
     }
 }
+
+.experience-container {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    padding-top: 3rem;
+
+    .experience-title {
+        display: block;
+        font-size: 4rem;
+        color: $default-text;
+        text-align: right;
+    }
+
+    .experience-switch {
+        height: 1.5rem;
+        width: 3.5rem;
+        display: flex;
+        border-radius: 2rem;
+        padding: 3px;
+        margin: 0 auto;
+        background: #858585;
+        justify-content: flex-start;
+        transition: 0.2s ease;
+
+        .switch {
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 100%;
+            background: $white;
+            align-self: center;
+        }
+    }
+
+    .timeline-title {
+        text-align: center;
+        margin: 2rem;
+        font-size: 2rem;
+    }
+}

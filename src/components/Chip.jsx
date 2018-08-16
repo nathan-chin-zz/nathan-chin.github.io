@@ -15,7 +15,7 @@ export default class Chip extends Component {
         }
 
         return (
-           <div className="chip" style={style}><Text weight="bold" display="inline" color="white">{this.props.label}</Text></div>
+           <div className="chip" style={style}><Text weight="medium" display="inline" color="white">{this.props.label}</Text></div>
         );
     }
 }
