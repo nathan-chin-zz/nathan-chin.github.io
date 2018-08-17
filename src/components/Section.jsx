@@ -105,7 +105,10 @@ export default class Section extends Component {
                     </div>
                     <Text weight="regular" className="timeline-title">Work Experience</Text>
                     <Timeline>
-                        <Event/>
+                        <Event orientation="left" color="#FFD98C" label="Hudl"/>
+                        <Event orientation="right" color="#FFD98C" label="Krew"/>
+                        <Event orientation="left" color="#FFD98C" label="Target"/>
+                        <Event orientation="right" color="#FFD98C" label="Pinstack"/>
                     </Timeline>
                 </div>
             );
@@ -118,7 +121,12 @@ export default class Section extends Component {
                         <div className="switch"/>
                     </div>
                     <Text weight="regular" className="timeline-title">Leadership Experience</Text>
-                    <Timeline/>
+                    <Timeline>
+                        <Event orientation="right" color="greenyellow" label="Freetail Hackers"/>
+                        <Event orientation="left" color="greenyellow" label="IEEE"/>
+                        <Event orientation="right" color="greenyellow" label="#HACK"/>
+                        <Event orientation="left" color="greenyellow" label="AACM"/>
+                    </Timeline>
                 </div>
             );
         }

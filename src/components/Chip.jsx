@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text.jsx';
 
-import '../style/App.scss';
+import '../style/Components.scss';
 
 export default class Chip extends Component {
     constructor(props){
