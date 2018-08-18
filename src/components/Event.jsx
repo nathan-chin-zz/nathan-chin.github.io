@@ -16,9 +16,12 @@ export default class Event extends Component {
                 <div className="event">
                     <div className="event-line" style={{ background: theme }}/>
                     <div className="event-details">
-                        <div className="event-description">
+                        <div className="event-description-container">
+                            <div className="event-description" style={{ background: theme }}>
+                                <Text weight="regular" color="#ffffff">{!!this.props.date ? this.props.date : "CURRENT"}</Text>
+                            </div>
                         </div>
-                        <img className="event-image" style={{ border: `5px solid ${theme}` }}/>
+                        <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
                         <div className="event-label-container">
                             <div className="event-label" style={{ marginLeft: "2rem" }}>
                                 <Text weight="semibold" size="2rem">{this.props.label}</Text>
@@ -37,8 +40,11 @@ export default class Event extends Component {
                                 <Text weight="semibold" size="2rem">{this.props.label}</Text>
                             </div>
                         </div>
-                        <img className="event-image" style={{ border: `0.25rem solid ${theme}` }}/>
-                        <div className="event-description">
+                        <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
+                        <div className="event-description-container">
+                            <div className="event-description" style={{ background: theme }}>
+                            
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,5 +57,7 @@ Event.propTypes = {
     orientation: PropTypes.string,
     color: PropTypes.string,
     label: PropTypes.string,
+    image: PropTypes.string,
+    date: PropTypes.string,
     description: PropTypes.string,
 }

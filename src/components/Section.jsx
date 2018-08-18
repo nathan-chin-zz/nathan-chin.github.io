@@ -6,6 +6,11 @@ import Timeline from './Timeline.jsx';
 import Event from './Event.jsx';
 import universityLogo from '../assets/UT_logo.png';
 import aboutLogo from '../assets/About_Logo.png';
+import hudlLogo from '../assets/Hudl_Logo.png';
+import krewLogo from '../assets/Krew_Logo.png';
+import targetLogo from '../assets/Target_Logo.png';
+import pinstackLogo from '../assets/Pinstack_Logo2.png';
+import freetailLogo from '../assets/Freetail_Logo.png';
 
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
@@ -105,10 +110,10 @@ export default class Section extends Component {
                     </div>
                     <Text weight="regular" className="timeline-title">Work Experience</Text>
                     <Timeline>
-                        <Event orientation="left" color="#FFD98C" label="Hudl"/>
-                        <Event orientation="right" color="#FFD98C" label="Krew"/>
-                        <Event orientation="left" color="#FFD98C" label="Target"/>
-                        <Event orientation="right" color="#FFD98C" label="Pinstack"/>
+                        <Event orientation="left" color="#f26722" image={hudlLogo} label="Hudl" date="MAY 2018 - AUGUST 2018"/>
+                        <Event orientation="right" color="#3c3f58" image={krewLogo} label="Krew"/>
+                        <Event orientation="left" color="#cc0000" image={targetLogo} label="Target"/>
+                        <Event orientation="right" color="#e92229" image={pinstackLogo} label="Pinstack"/>
                     </Timeline>
                 </div>
             );
@@ -122,7 +127,7 @@ export default class Section extends Component {
                     </div>
                     <Text weight="regular" className="timeline-title">Leadership Experience</Text>
                     <Timeline>
-                        <Event orientation="right" color="greenyellow" label="Freetail Hackers"/>
+                        <Event orientation="right" color="#ffffff" image={freetailLogo} label="Freetail Hackers"/>
                         <Event orientation="left" color="greenyellow" label="IEEE"/>
                         <Event orientation="right" color="greenyellow" label="#HACK"/>
                         <Event orientation="left" color="greenyellow" label="AACM"/>
