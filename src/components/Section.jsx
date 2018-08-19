@@ -4,13 +4,17 @@ import Text from './Text.jsx';
 import Chip from './Chip.jsx';
 import Timeline from './Timeline.jsx';
 import Event from './Event.jsx';
+import Carousel from './Carousel.jsx';
 import universityLogo from '../assets/UT_logo.png';
 import aboutLogo from '../assets/About_Logo.png';
 import hudlLogo from '../assets/Hudl_Logo.png';
 import krewLogo from '../assets/Krew_Logo.png';
 import targetLogo from '../assets/Target_Logo.png';
-import pinstackLogo from '../assets/Pinstack_Logo2.png';
+import pinstackLogo from '../assets/Pinstack_Logo.png';
 import freetailLogo from '../assets/Freetail_Logo.png';
+import ieeeLogo from '../assets/IEEE_Logo.png';
+import hackLogo from '../assets/Indigitous_HACK_Logo.png';
+import aacmLogo from '../assets/AACM_Logo.png';
 
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
@@ -110,10 +114,35 @@ export default class Section extends Component {
                     </div>
                     <Text weight="regular" className="timeline-title">Work Experience</Text>
                     <Timeline>
-                        <Event orientation="left" color="#f26722" image={hudlLogo} label="Hudl" date="MAY 2018 - AUGUST 2018"/>
-                        <Event orientation="right" color="#3c3f58" image={krewLogo} label="Krew"/>
-                        <Event orientation="left" color="#cc0000" image={targetLogo} label="Target"/>
-                        <Event orientation="right" color="#e92229" image={pinstackLogo} label="Pinstack"/>
+                        <Event 
+                            orientation="left" 
+                            color="#f26722" 
+                            image={hudlLogo} 
+                            label="Hudl" 
+                            date="MAY 2018 - AUGUST 2018"
+                            title="Software Development Intern"
+                            description="This is a description of the job to tell you what I did and why it was important and relevant for me to mentionThis is a description of the job to tell you what I did and why it was important and relevant for me to mentionThis is a description of the job to tell you what I did and why it was important and relevant for me to mention"/>
+                        <Event 
+                            orientation="right" 
+                            color="#3c3f58" 
+                            image={krewLogo} 
+                            label="Krew"
+                            date="November 2017 - January 2018"
+                            title="Android Developer"/>
+                        <Event 
+                            orientation="left" 
+                            color="#cc0000" 
+                            image={targetLogo} 
+                            label="Target"
+                            date="May 2017 - Present"
+                            title="Salesfloor Team Member"/>
+                        <Event 
+                            orientation="right" 
+                            color="#e92229" 
+                            image={pinstackLogo} 
+                            label="Pinstack"
+                            date="May 2016 - August 2016"
+                            title="Gameroom Attendant"/>
                     </Timeline>
                 </div>
             );
@@ -121,16 +150,44 @@ export default class Section extends Component {
         else {
             return (
                 <div className="experience-container">
-                    <Text className="experience-title" weight="extrabold">Experience</Text>
+                    <Text className="experience-title" weight="extrabold" color="white">Experience</Text>
                     <div className="experience-switch" onClick={this.toggleExperience.bind(this)} style={{ justifyContent: "flex-end", background: "#FFD98C" }}>
                         <div className="switch"/>
                     </div>
-                    <Text weight="regular" className="timeline-title">Leadership Experience</Text>
+                    <Text weight="regular" className="timeline-title" color="white">Leadership Experience</Text>
                     <Timeline>
-                        <Event orientation="right" color="#ffffff" image={freetailLogo} label="Freetail Hackers"/>
-                        <Event orientation="left" color="greenyellow" label="IEEE"/>
-                        <Event orientation="right" color="greenyellow" label="#HACK"/>
-                        <Event orientation="left" color="greenyellow" label="AACM"/>
+                        <Event 
+                            orientation="right" 
+                            color="#ffffff" 
+                            image={freetailLogo} 
+                            label="Freetail Hackers" 
+                            labelColor="white"
+                            date="March 2017 - Present"
+                            title="Co-Lead Director, Outreach Organizer"/>
+                        <Event 
+                            orientation="left" 
+                            color="#fdbb40" 
+                            image={ieeeLogo} 
+                            label="IEEE" 
+                            labelColor="white"
+                            date="Fall 2016 - Present"
+                            title="Assistant Officer - Events, Communications"/>
+                        <Event 
+                            orientation="right" 
+                            color="#fc4513" 
+                            image={hackLogo} 
+                            label="#HACK" 
+                            labelColor="white"
+                            date="July 2017 - Present"
+                            title="Officer"/>
+                        <Event 
+                            orientation="left" 
+                            color="#1c75ba" 
+                            image={aacmLogo} 
+                            label="AACM" 
+                            labelColor="white"
+                            date="Fall 2016 - Present"
+                            title="Active Member"/>
                     </Timeline>
                 </div>
             );
@@ -141,6 +198,26 @@ export default class Section extends Component {
         return (
             <div className="projects-container">
                 <Text className="projects-title" weight="extrabold">Projects</Text>
+                <Carousel>
+                    <div className="carousel-page">
+                        <h3>1</h3>
+                    </div>
+                    <div className="carousel-page">
+                        <h3>2</h3>
+                    </div>
+                    <div className="carousel-page">
+                        <h3>3</h3>
+                    </div>
+                    <div className="carousel-page">
+                        <h3>4</h3>
+                    </div>
+                    <div className="carousel-page">
+                        <h3>5</h3>
+                    </div>
+                    <div className="carousel-page">
+                        <h3>6</h3>
+                    </div>
+                </Carousel>
             </div>
         );
     }

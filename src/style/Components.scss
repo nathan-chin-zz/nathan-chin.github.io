@@ -70,6 +70,7 @@
         display: block;
         margin: 0 auto;
         background: $white;
+        transition: 0.2s ease;
     }
 
     .event-description-container {
@@ -79,6 +80,7 @@
             width: 80%;
             height: 100%;
             margin: 0 10%;
+            padding: 5px;
         }
     }
 
@@ -88,10 +90,32 @@
 
         .event-label {
             height: 4rem;
-            width: 10rem;
+            width: 100%;
             margin-top: 1.25rem;
             display: flex;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
         }
+    }
+}
+
+.event-details:hover > .event-image {
+    transform: scale(1.1);
+    transform-origin: center;
+    backface-visibility: hidden;
+    transition: 0.2s ease;
+}
+
+// Carousel
+.carousel {
+    width: 50%;
+    margin: 0 auto;
+
+    .carousel-page {
+        background: $white;
+        border: 5px solid aquamarine;
+        width: 80%;
+        height: 100%;
     }
 }

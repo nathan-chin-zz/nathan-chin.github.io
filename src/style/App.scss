@@ -203,3 +203,16 @@ body {
         font-size: 2rem;
     }
 }
+
+.projects-container {
+    position: relative;
+    z-index: 10;
+    height: 100%;
+    padding-top: 3rem;
+    
+    .projects-title {
+        display: inline-block;
+        font-size: 4rem;
+        color: $white;
+    }
+}
