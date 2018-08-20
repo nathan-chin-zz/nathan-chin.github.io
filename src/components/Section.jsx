@@ -59,7 +59,6 @@ export default class Section extends Component {
                 <div className="about-description">
                     <Text weight="regular">Hi, my name is Nathan Chin, and I'm a current third-year electrical and computer engineering student at The University of Texas at Austin</Text>
                     <div className="divider"/>
-                    <Text weight="bold" size="1.5rem">Education</Text>
                     <div className="education-container">
                         <img className="logo" src={universityLogo}/>
                         <div className="school" style={{ marginRight: "4rem" }}>
@@ -112,9 +111,10 @@ export default class Section extends Component {
                     <div className="experience-switch" onClick={this.toggleExperience.bind(this)}>
                         <div className="switch"/>
                     </div>
-                    <Text weight="regular" className="timeline-title">Work Experience</Text>
+                    <Text weight="semibold" className="timeline-title">Work Experience</Text>
                     <Timeline state={this.state.workExperience}>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="left" 
                             color="#f26722" 
                             image={hudlLogo} 
@@ -123,6 +123,7 @@ export default class Section extends Component {
                             title="Software Development Intern"
                             description="This is a description of the job to tell you what I did and why it was important and relevant for me to mentionThis is a description of the job to tell you what I did and why it was important and relevant for me to mentionThis is a description of the job to tell you what I did and why it was important and relevant for me to mention"/>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="right" 
                             color="#3c3f58" 
                             image={krewLogo} 
@@ -130,6 +131,7 @@ export default class Section extends Component {
                             date="November 2017 - January 2018"
                             title="Android Developer"/>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="left" 
                             color="#cc0000" 
                             image={targetLogo} 
@@ -137,6 +139,7 @@ export default class Section extends Component {
                             date="May 2017 - Present"
                             title="Salesfloor Team Member"/>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="right" 
                             color="#e92229" 
                             image={pinstackLogo} 
@@ -154,38 +157,38 @@ export default class Section extends Component {
                     <div className="experience-switch" onClick={this.toggleExperience.bind(this)} style={{ justifyContent: "flex-end", background: "#FFD98C" }}>
                         <div className="switch"/>
                     </div>
-                    <Text weight="regular" className="timeline-title" color="white">Leadership Experience</Text>
+                    <Text weight="semibold" className="timeline-title" color="white">Leadership Experience</Text>
                     <Timeline>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="right" 
-                            color="#ffffff" 
+                            color="#222225" 
                             image={freetailLogo} 
-                            label="Freetail Hackers" 
-                            labelColor="white"
+                            label="Freetail Hackers"
                             date="March 2017 - Present"
                             title="Co-Lead Director, Outreach Organizer"/>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="left" 
                             color="#fdbb40" 
                             image={ieeeLogo} 
-                            label="IEEE" 
-                            labelColor="white"
+                            label="IEEE"
                             date="Fall 2016 - Present"
                             title="Assistant Officer - Events, Communications"/>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="right" 
                             color="#fc4513" 
                             image={hackLogo} 
-                            label="#HACK" 
-                            labelColor="white"
+                            label="#HACK"
                             date="July 2017 - Present"
                             title="Officer"/>
                         <Event 
+                            workState={this.state.workExperience}
                             orientation="left" 
                             color="#1c75ba" 
                             image={aacmLogo} 
-                            label="AACM" 
-                            labelColor="white"
+                            label="AACM"
                             date="Fall 2016 - Present"
                             title="Active Member"/>
                     </Timeline>

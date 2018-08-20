@@ -113,7 +113,7 @@
     }
 }
 
-.event-details:hover > .event-image {
+.event:hover > .event-details > .event-image-container > .event-image {
     transform: scale(1.1);
     transform-origin: center;
     backface-visibility: hidden;

@@ -11,6 +11,7 @@ export default class Event extends Component {
 
     render() {
         const theme = this.props.color;
+        const state = this.props.workState;
         if (this.props.orientation.toLowerCase() === 'left') {
             return (
                 <div className="event">
@@ -24,13 +25,13 @@ export default class Event extends Component {
                         </div>
                         <div className="event-image-container">
                             <div className="event-image-lines" style={{ background: theme }}/>
-                            <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
+                            <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}`, background: theme }}/>
                             <div className="event-image-lines" style={{ background: theme }}/>
                         </div>
                         <div className="event-label-container" style={{ justifyContent: "flex-end"}}>
                             <div className="event-label" style={{ marginLeft: "2rem", alignItems: "flex-start" }}>
-                                <Text weight="semibold" size="2rem" color={!!this.props.labelColor ? this.props.labelColor : "#383838"}>{this.props.label}</Text>
-                                <Text weight="regular" size="1rem" color={!!this.props.labelColor ? this.props.labelColor : "#383838"}>{this.props.date}</Text>
+                                <Text weight="semibold" size="2rem" color={state ? "#383838" : "#ffffff"}>{this.props.label}</Text>
+                                <Text weight="regular" size="1rem" color={state ? "#383838" : "#ffffff"}>{this.props.date}</Text>
                             </div>
                         </div>
                     </div>
@@ -44,13 +45,13 @@ export default class Event extends Component {
                     <div className="event-details">
                         <div className="event-label-container" style={{ justifyContent: "flex-end"}}>
                             <div className="event-label" style={{ marginRight: "2rem", alignItems: "flex-end" }}>
-                                <Text weight="semibold" size="2rem" color={!!this.props.labelColor ? this.props.labelColor : "#383838"}>{this.props.label}</Text>
-                                <Text weight="regular" size="1rem" color={!!this.props.labelColor ? this.props.labelColor : "#383838"}>{this.props.date}</Text>
+                                <Text weight="semibold" size="2rem" color={state ? "#383838" : "#ffffff"}>{this.props.label}</Text>
+                                <Text weight="regular" size="1rem" color={state ? "#383838" : "#ffffff"}>{this.props.date}</Text>
                             </div>
                         </div>
                         <div className="event-image-container">
                             <div className="event-image-lines" style={{ background: theme }}/>
-                            <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
+                            <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}`, background: theme }}/>
                             <div className="event-image-lines" style={{ background: theme }}/>
                         </div>
                         <div className="event-description-container">
@@ -68,10 +69,10 @@ export default class Event extends Component {
 }
 
 Event.propTypes = {
+    workState: PropTypes.bool,
     orientation: PropTypes.string,
     color: PropTypes.string,
     label: PropTypes.string,
-    labelColor: PropTypes.string,
     image: PropTypes.string,
     date: PropTypes.string,
     title: PropTypes.string,
