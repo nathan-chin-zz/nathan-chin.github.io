@@ -9,16 +9,14 @@ export default class Timeline extends Component {
         super(props);
     }
 
-    printEvent(event) {
-
-    }
-
     render() {
         return (
             <div className="timeline">
-                <Text weight="regular" className="endpoint-now">Now</Text>
-                <div className="timeline-now"/>
+                <Text weight="regular" className="endpoint-text" color={this.props.state ? "#383838" : "#fff07c"}>Now</Text>
+                <div className="endpoint" style={{ background: (this.props.state ? "#383838" : "#fff07c") }}/>
                 {this.props.children}
+                <div className="endpoint" style={{ background: (this.props.state ? "#383838" : "#fff07c") }}/>
+                <Text weight="regular" className="endpoint-text"  color={this.props.state ? "#383838" : "#fff07c"}>Then</Text>
             </div>
         );
     }
@@ -26,4 +24,5 @@ export default class Timeline extends Component {
 
 Timeline.propTypes = {
     children: PropTypes.node.isRequired,
+    state: PropTypes.bool,
 }

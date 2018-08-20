@@ -40,15 +40,18 @@
 }
 
 // Timeline
-.endpoint-now {
+.timeline {
+    padding-bottom: 14rem;
+}
+
+.endpoint-text {
     text-align: center;
 }
 
-.timeline-now {
+.endpoint {
     height: 1rem;
     width: 1rem;
     border-radius: 100%;
-    background: $switch-background-academic;
     margin: 0 auto;
 }
 
@@ -60,17 +63,29 @@
 }
 
 .event-details {
+    position: relative;
     display: flex;
     justify-content: center;
 
-    .event-image {
-        width: 6rem;
-        height: 6rem;
-        border-radius: 100%;
-        display: block;
-        margin: 0 auto;
-        background: $white;
-        transition: 0.2s ease;
+    .event-image-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .event-image {
+            width: 6rem;
+            height: 6rem;
+            border-radius: 100%;
+            display: block;
+            margin: 0 auto;
+            background: $white;
+            transition: 0.2s ease;
+        }
+
+        .event-image-lines {
+            width: 0.25rem;
+            height: 100%;
+        }
     }
 
     .event-description-container {
@@ -80,22 +95,20 @@
             width: 80%;
             height: 100%;
             margin: 0 10%;
-            padding: 5px;
         }
     }
 
     .event-label-container {
         flex: 1;
         display: flex;
+        align-items: center;
 
         .event-label {
             height: 4rem;
             width: 100%;
-            margin-top: 1.25rem;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-end;
         }
     }
 }

@@ -113,7 +113,7 @@ export default class Section extends Component {
                         <div className="switch"/>
                     </div>
                     <Text weight="regular" className="timeline-title">Work Experience</Text>
-                    <Timeline>
+                    <Timeline state={this.state.workExperience}>
                         <Event 
                             orientation="left" 
                             color="#f26722" 

@@ -18,11 +18,15 @@ export default class Event extends Component {
                     <div className="event-details">
                         <div className="event-description-container">
                             <div className="event-description" style={{ background: theme }}>
-                                { !!this.props.title ? (<Text weight="bold" color="#ffffff">{this.props.title.toUpperCase()}</Text>) : "" }
-                                <Text weight="regular" color="#ffffff">{this.props.description}</Text>
+                                { !!this.props.title ? (<Text weight="bold" color="#ffffff" padding="5px">{this.props.title.toUpperCase()}</Text>) : "" }
+                                <Text weight="regular" color="#ffffff" padding="5px">{this.props.description}</Text>
                             </div>
                         </div>
-                        <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
+                        <div className="event-image-container">
+                            <div className="event-image-lines" style={{ background: theme }}/>
+                            <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
+                            <div className="event-image-lines" style={{ background: theme }}/>
+                        </div>
                         <div className="event-label-container" style={{ justifyContent: "flex-end"}}>
                             <div className="event-label" style={{ marginLeft: "2rem", alignItems: "flex-start" }}>
                                 <Text weight="semibold" size="2rem" color={!!this.props.labelColor ? this.props.labelColor : "#383838"}>{this.props.label}</Text>
@@ -30,6 +34,7 @@ export default class Event extends Component {
                             </div>
                         </div>
                     </div>
+                    <div className="event-line" style={{ background: theme }}/>
                 </div>
             );
         } else {
@@ -43,14 +48,19 @@ export default class Event extends Component {
                                 <Text weight="regular" size="1rem" color={!!this.props.labelColor ? this.props.labelColor : "#383838"}>{this.props.date}</Text>
                             </div>
                         </div>
-                        <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
+                        <div className="event-image-container">
+                            <div className="event-image-lines" style={{ background: theme }}/>
+                            <img className="event-image" src={this.props.image} style={{ border: `0.25rem solid ${theme}` }}/>
+                            <div className="event-image-lines" style={{ background: theme }}/>
+                        </div>
                         <div className="event-description-container">
                             <div className="event-description" style={{ background: theme }}>
-                                { !!this.props.title ? (<Text weight="bold" color="#ffffff">{this.props.title.toUpperCase()}</Text>) : "" }
-                                <Text weight="regular" color="#ffffff">{this.props.description}</Text>
+                                { !!this.props.title ? (<Text weight="bold" color="#ffffff" padding="5px">{this.props.title.toUpperCase()}</Text>) : "" }
+                                <Text weight="regular" color="#ffffff" padding="5px">{this.props.description}</Text>
                             </div>
                         </div>
                     </div>
+                    <div className="event-line" style={{ background: theme }}/>
                 </div>
             );
         }

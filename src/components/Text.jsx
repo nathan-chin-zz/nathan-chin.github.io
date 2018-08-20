@@ -14,6 +14,7 @@ export default class Text extends Component {
             color: this.props.color,
             fontSize: this.props.size,
             display: this.props.display,
+            padding: this.props.padding,
         }
 
         return (
@@ -33,4 +34,5 @@ Text.propTypes = {
     size: PropTypes.string,
     color: PropTypes.string,
     display: PropTypes.string,
+    padding: PropTypes.string,
 };
