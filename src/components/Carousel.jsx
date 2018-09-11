@@ -29,9 +29,8 @@ export default class Carousel extends Component {
             accessibility: true,
             adaptiveHeight: true,
             asNavFor: this.state.slideDescription,
-            centerMode: true,
             speed: 500,
-            slidesToShow: 3,
+            slidesToShow: 1,
             slidesToScroll: 1,
         };
         const settingsDescription = {
@@ -49,10 +48,10 @@ export default class Carousel extends Component {
         return (
             <div className="carousel">
                 <Slider {...settingsTitle}>
-                    {this.props.children}
+                    {this.props.children.filter(x => x.props.className.includes("title"))}
                 </Slider>
                 <Slider {...settingsDescription}>
-                    {this.props.children}
+                    {this.props.children.filter(x => x.props.className.includes("description"))}
                 </Slider>
             </div>
         );

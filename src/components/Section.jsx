@@ -11,6 +11,7 @@ import hudlLogo from '../assets/Hudl_Logo.png';
 import krewLogo from '../assets/Krew_Logo.png';
 import targetLogo from '../assets/Target_Logo.png';
 import pinstackLogo from '../assets/Pinstack_Logo.png';
+import tennisLogo from '../assets/Tennis_Logo.png';
 import freetailLogo from '../assets/Freetail_Logo.png';
 import ieeeLogo from '../assets/IEEE_Logo.png';
 import hackLogo from '../assets/Indigitous_HACK_Logo.png';
@@ -121,7 +122,12 @@ export default class Section extends Component {
                             label="Hudl" 
                             date="MAY 2018 - AUGUST 2018"
                             title="Software Development Intern"
-                            description="This is a description of the job to tell you what I did and why it was important and relevant for me to mentionThis is a description of the job to tell you what I did and why it was important and relevant for me to mentionThis is a description of the job to tell you what I did and why it was important and relevant for me to mention"/>
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Developed new features for the Hudl Assist football product in a .NET environment using C# and JavaScript (ES6, React)</li>
+                                <li>Updated web page using React to create a filterable masonry layout that doubled user engagement and activity</li>
+                                <li>Wrote a smart snapping algorithm in JavaScript to help analysts tag formations consistently, accurately and 25% faster</li>
+                                <li>Learned to communicate effectively and accomplish goals through an adherence to Scrum practices</li>
+                            </ul>}/> 
                         <Event 
                             workState={this.state.workExperience}
                             orientation="right" 
@@ -129,7 +135,11 @@ export default class Section extends Component {
                             image={krewLogo} 
                             label="Krew"
                             date="November 2017 - January 2018"
-                            title="Android Developer"/>
+                            title="Android Developer"
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Worked on developing the first iteration of the Krew Rideshare application for Android from scratch</li>
+                                <li>Integrated REST APIs and the APIs of Facebook, Stripe, and Google Maps to manage logins, payments, and ride requests</li>
+                            </ul>}/>
                         <Event 
                             workState={this.state.workExperience}
                             orientation="left" 
@@ -137,7 +147,10 @@ export default class Section extends Component {
                             image={targetLogo} 
                             label="Target"
                             date="May 2017 - Present"
-                            title="Salesfloor Team Member"/>
+                            title="Salesfloor Team Member"
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Greet and attend to guests while maintaining the grocery section through restocking and back stocking</li>
+                            </ul>}/>
                         <Event 
                             workState={this.state.workExperience}
                             orientation="right" 
@@ -145,7 +158,21 @@ export default class Section extends Component {
                             image={pinstackLogo} 
                             label="Pinstack"
                             date="May 2016 - August 2016"
-                            title="Gameroom Attendant"/>
+                            title="Gameroom Attendant"
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Administered attractions like rock climbing and laser tag and interacted with guests through assistance and instruction</li>
+                            </ul>}/>
+                        <Event
+                            workState={this.state.workExperience}
+                            orientation="left"
+                            color="#35d130"
+                            image={tennisLogo}
+                            label="Self Employed"
+                            date="May 2016 - August 2016"
+                            title="Tennis Instructor"
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Prepared competitive youth tennis players for tournaments through training</li>
+                            </ul>}/>
                     </Timeline>
                 </div>
             );
@@ -166,7 +193,11 @@ export default class Section extends Component {
                             image={freetailLogo} 
                             label="Freetail Hackers"
                             date="March 2017 - Present"
-                            title="Co-Lead Director, Outreach Organizer"/>
+                            title="Co-President, Outreach Organizer"
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Lead a team of 30 students to promote active learning in tech, specifically by organizing hackathons on campus</li>
+                                <li>Oversee UT Austin’s annual hackathon, HackTX, which caters to 750+ attendees on a $125k budget</li>
+                            </ul>}/>
                         <Event 
                             workState={this.state.workExperience}
                             orientation="left" 
@@ -174,7 +205,10 @@ export default class Section extends Component {
                             image={ieeeLogo} 
                             label="IEEE"
                             date="Fall 2016 - Present"
-                            title="Assistant Officer - Events, Communications"/>
+                            title="Assistant Officer - Events, Communications"
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Manage the social media and registration for the local hosting of a global hackathon with 40+ attendees</li>
+                            </ul>}/>
                         <Event 
                             workState={this.state.workExperience}
                             orientation="right" 
@@ -182,7 +216,10 @@ export default class Section extends Component {
                             image={hackLogo} 
                             label="#HACK"
                             date="July 2017 - Present"
-                            title="Officer"/>
+                            title="Officer"
+                            description={<ul style={{marginLeft: "1rem"}}>
+                                <li>Organize logistics and advertise for professional development events that cater to 150+ electrical engineering students</li>
+                            </ul>}/>
                         <Event 
                             workState={this.state.workExperience}
                             orientation="left" 
@@ -202,23 +239,41 @@ export default class Section extends Component {
             <div className="projects-container">
                 <Text className="projects-title" weight="extrabold">Projects</Text>
                 <Carousel>
-                    <div className="carousel-page">
+                    <div className="carousel-page title">
                         <h3>1</h3>
                     </div>
-                    <div className="carousel-page">
+                    <div className="carousel-page description">
+                        
+                    </div>
+                    <div className="carousel-page title">
                         <h3>2</h3>
                     </div>
-                    <div className="carousel-page">
+                    <div className="carousel-page description">
+                        <h3>20</h3>
+                    </div>
+                    <div className="carousel-page title">
                         <h3>3</h3>
                     </div>
-                    <div className="carousel-page">
+                    <div className="carousel-page description">
+                        <h3>30</h3>
+                    </div>
+                    <div className="carousel-page title">
                         <h3>4</h3>
                     </div>
-                    <div className="carousel-page">
+                    <div className="carousel-page description">
+                        <h3>40</h3>
+                    </div>
+                    <div className="carousel-page title">
                         <h3>5</h3>
                     </div>
-                    <div className="carousel-page">
+                    <div className="carousel-page description">
+                        <h3>50</h3>
+                    </div>
+                    <div className="carousel-page title">
                         <h3>6</h3>
+                    </div>
+                    <div className="carousel-page description">
+                        <h3>60</h3>
                     </div>
                 </Carousel>
             </div>
@@ -229,6 +284,10 @@ export default class Section extends Component {
         return (
             <div className="skills-container">
                 <Text className="skills-title" weight="extrabold">Skills</Text>
+                <Text>Languages: JavaScript, Java, Python, C, C++, HTML, CSS/SCSS, C#, Assembly (arm and LC3), MATLAB</Text>
+                <Text>Tools and Frameworks: React, Node.js, jQuery, Bootstrap, Git, </Text>
+                <Text>Tools: Bash and cURL, Gulp, Amazon AWS, .NET</Text>
+                <Text>Technologies: </Text>
             </div>
         );
     }

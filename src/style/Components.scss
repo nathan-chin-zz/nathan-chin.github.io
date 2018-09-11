@@ -122,13 +122,19 @@
 
 // Carousel
 .carousel {
-    width: 50%;
+    position: relative;
     margin: 0 auto;
 
     .carousel-page {
         background: $white;
-        border: 5px solid aquamarine;
         width: 80%;
         height: 100%;
+        margin-top: 1rem;
+
+        &.description {
+            background: red;
+            width: 10rem;
+            height: 10rem;
+        }
     }
 }

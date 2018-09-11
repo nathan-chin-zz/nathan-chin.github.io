@@ -51,7 +51,7 @@
         position: relative;
         background: $about-background;
         background: $about-background-gradient;
-        padding-left: 4rem;
+        padding: 0 8rem;
         z-index: 5;
 
         & .angle1 {
@@ -75,14 +75,14 @@
         background: $white;
         z-index: 1;
         transition: 0.2s ease;
-        padding-bottom: 4rem;
+        padding: 0 8rem;
     }
     
     .projects {
         position: relative;
         background: $projects-background;
         background: $projects-background-gradient;
-        padding-left: 4rem;
+        padding: 0 8rem;
         z-index: 5;
 
         & .angle1 {

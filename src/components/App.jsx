@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import * as Scroll from 'react-scroll';
 import { Element } from 'react-scroll';
+import { slide as Menu } from 'react-burger-menu';
 import Section from './Section.jsx';
 import Text from './Text.jsx';
 import introLogo from '../assets/Intro_Logo.png';
@@ -19,16 +20,14 @@ class App extends Component {
 
         return (
             <div className="main">
-                <div className="nav-sidebar">
-                    <div className="nav-container">
-                       <Text weight="light" onClick={() => this.scrollTo('intro')}>HOME</Text>
-                       <Text weight="light" onClick={() => this.scrollTo('about')}>ABOUT</Text>
-                       <Text weight="light" onClick={() => this.scrollTo('experience')}>EXPERIENCE</Text>
-                       <Text weight="light" onClick={() => this.scrollTo('projects')}>PROJECTS</Text>
-                       <Text weight="light" onClick={() => this.scrollTo('skills')}>SKILLS</Text>
-                       <Text weight="light" onClick={() => this.scrollTo('contact')}>CONTACT</Text>
-                    </div>
-                </div>              
+                <Menu>
+                    <Text weight="light" color="#fff" className="menu-link"onClick={() => this.scrollTo('intro')}>HOME</Text><br/>
+                    <Text weight="light" color="#fff" className="menu-link"onClick={() => this.scrollTo('about')}>ABOUT</Text><br/>
+                    <Text weight="light" color="#fff" className="menu-link"onClick={() => this.scrollTo('experience')}>EXPERIENCE</Text><br/>
+                    <Text weight="light" color="#fff" className="menu-link"onClick={() => this.scrollTo('projects')}>PROJECTS</Text><br/>
+                    <Text weight="light" color="#fff" className="menu-link"onClick={() => this.scrollTo('skills')}>SKILLS</Text><br/>
+                    <Text weight="light" color="#fff" className="menu-link"onClick={() => this.scrollTo('contact')}>CONTACT</Text>
+                </Menu>           
                 <div className="corner-angle-1" />
                 <div className="corner-angle-2" />
                 <div className="corner-angle-3" />

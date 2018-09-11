@@ -11,40 +11,75 @@ body {
     overflow-x: hidden;
 }
 
+/* Position and sizing of burger button */
+.bm-burger-button {
+    position: fixed;
+    width: 2rem;
+    height: 1.5rem;
+    left: 2.5rem;
+    top: 2rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+    background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+    background: #373a47;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+    overflow: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+.bm-item {
+    display: inline-block;
+
+    &.menu-link {
+        padding: 1rem;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    &.menu-link:hover {
+        color: $header-background !important;
+    }
+}
+
+/* Styling of overlay */
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
 .logo {
     height: 60px;
     width: 60px;
     border-radius: 1px;
     padding: 5px 1rem 0 0;
-}
-
-.nav-sidebar {
-    height: 100%;
-    width: 10rem;
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    right: 0;
-    z-index: 2000;
-
-    .nav-container {
-        height: 8rem;
-        width: 10rem;
-        padding-left: 4.5rem;
-        position: fixed;
-        top: 32%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        z-index: 2000;
-
-        > *:hover {
-            font-weight: $font-bold;
-            cursor: pointer;
-        }
-    }
 }
 
 .section-logo {
@@ -60,7 +95,7 @@ body {
     right: -12rem;
     height: 14rem; //16rem;
     width: 36rem; //25rem;
-    z-index: 1000;
+    z-index: 100;
     background-color: $header-background;
     transform-origin: top right;
     transform: rotate(26deg); //rotate(35deg);
@@ -73,7 +108,7 @@ body {
     right: -8rem;
     height: 9rem; //12rem;
     width: 36rem; //30rem;
-    z-index: 1000;
+    z-index: 100;
     background-color: $header-background;
     transform-origin: top right;
     transform: rotate(14deg); //rotate(24deg);
@@ -86,7 +121,7 @@ body {
     right: -8rem;
     height: 7rem; //9rem;
     width: 50rem;
-    z-index: 1000;
+    z-index: 100;
     background-color: $header-background;
     transform-origin: top right;
     transform: rotate(8deg); //rotate(12deg);
@@ -95,7 +130,7 @@ body {
 
 
 .title-text-container {
-    margin-left: 4rem;
+    margin-left: 8rem;
 }
 
 .title-text-1 {
@@ -132,7 +167,7 @@ body {
 
     .about-description {
         background: $white;
-        margin: 0 10rem 4rem 0;
+        margin-bottom: 4rem;
         padding: 2rem;
         border-radius: 1px;
         box-shadow: $card-shadow;
@@ -168,7 +203,6 @@ body {
         font-size: 4rem;
         color: $default-text;
         text-align: right;
-        margin-right: 4rem;
     }
 
     .experience-switch {
