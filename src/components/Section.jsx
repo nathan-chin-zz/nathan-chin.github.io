@@ -16,6 +16,12 @@ import freetailLogo from '../assets/Freetail_Logo.png';
 import ieeeLogo from '../assets/IEEE_Logo.png';
 import hackLogo from '../assets/Indigitous_HACK_Logo.png';
 import aacmLogo from '../assets/AACM_Logo.png';
+import project1 from '../assets/Project_ChillPill.png';
+import project2 from '../assets/Project_Personal_Website.png';
+import project3 from '../assets/Project_Sward.png';
+import project4 from '../assets/Project_WorldView.png';
+import project5 from '../assets/Project_RoundUp.png';
+import project6 from '../assets/Project_Tower_Titans.png';
 
 import Typist from 'react-typist';
 import 'react-typist/dist/Typist.css';
@@ -240,37 +246,68 @@ export default class Section extends Component {
                 <Text className="projects-title" weight="extrabold">Projects</Text>
                 <Carousel>
                     <div className="carousel-page title">
-                        <h3>1</h3>
+                        <img className="project-image" src={project1}/>
                     </div>
                     <div className="carousel-page description">
-                        
+                        <Text weight="bold" size="3rem">ChillPill</Text>
+                        <Text weight="medium" size="1.5rem">What is it?</Text>
+                        <Text weight="regular" size="1rem">ChillPill is an IoT pill dispenser controlled by your smartphone (only available for Android). The product includes a physical pill dispenser powered by an Intel Joule compute module. Using bluetooth, a smartphone communicates to the dispenser to release a specified number of pills at a certain time. The Joule is connected to two DC motors, allowing for the dispensing of the pills from their containers. The Android app allows for users to create accounts, control when pills are released, and be notified of medication time.</Text>
+                        <br/><Text weight="medium" size="1.5rem">Why did you build this?</Text>
+                        <Text weight="regular" size="1rem">This project was created at MedHacks 2017 following the medication adherance challenge presented by CVS Pharmacy. Medication adherance is a huge problem with about 50% of patients who stop taking medication within the first year of prescription. This project was created to help people a)remember to take their medication through phone notifications and b)make getting the medication easier.</Text>
+                        <br/><Text weight="medium" size="1.5rem">How did you build this?</Text>
+                        <Text weight="regular" size="1rem">Most of this project is only conceptual because this was a hackathon project developed in 36 hours. However, the Android application was close to completion and a working model of the dispenser was created to show how the pills are dispensed. The app was created in Android Studio and used Amazon Web Services to store user account data (in DynamoDB) and allow user login. The pill dispenser model was created using materials available at the hackathon. Made completely out of pizza/Rice Krispie boxes, hot glue, and string, the dispenser was a rough model of what the dispenser is supposed to look like (we actually CADed the real dispenser for 3D printing but there wasn't enough time or resources to print it). An Intel Joule compute module and DC motors were attached to the model, and it actually dispensed pills as it should in the real model.</Text>
+                        <br/><Text weight="medium" size="1.5rem">Challenges faced?</Text>
+                        <Text weight="regular" size="1rem">There were a lot of challenges with this project. The workload was a lot heavier this time because we decided to incorporate hardware by creating the working model of the dispenser and software by creating the phone app. Also, only 3 members of the team had programming experience, so programming the microcomputer for the dispenser and the Android application were pretty much individual roles. With this in mind, I'm super proud of what we were able to accomplish during the hackathon time and how prepared we were for the presentation. Lastly, a lot of challenges we ran into were with new technologies being used, such as AWS and Bluetooth connection. Bluetooth connection was actually never complete. We were only able to connect the devices but not send information between the two.</Text>
+                        <br/><Text weight="medium" size="1.5rem">Your contribution?</Text>
+                        <Text weight="regular" size="1rem">My contribution was the Android app built to communicate with the Intel Joule board and send notifications to the user. I initially incorporated AWS sign-in with the app, but decided to customize the accounts more by storing user data into Amazon DynamoDB. So the design of the app and all of its development came from me (with advice here and now from other team members of course).</Text>
+                        <br/><Text weight="medium" size="1.5rem">Stats:</Text>
+                        <Text weight="regular" size="1rem">Time spent: September 8, 2017 - September 10, 2017 (36 hours)</Text>
+                        <Text weight="regular" size="1rem">Teammates: 4 (Peter Nguyen, Eric Wang, Jessica Wu, and Lauren Fang)</Text>
+                        <Text weight="regular" size="1rem">Tools used: Java, Android Studio, DynamoDB, Amazon Web Services, and an Intel Joule compute module</Text>
+                        <Text weight="regular" size="1rem">Links: • Github • Devpost</Text>
+                        <Text weight="regular" size="1rem">Things learned:
+• There are a lot of applications for the tech industry in the medical industry
+
+• Working on projects is a great way to meet new people. I worked with people I had never met before and we not only worked well together but also relly enjoyed the experience
+
+• Using harware on projects is a great way to get attention at hackathons
+
+• There are a lot of real problems in the medical industry and a lot of ways technology can help
+</Text>
+<Text weight="regular" size="1rem">Looking to the future:
+• Finish the app and try to work with the hardware myself
+
+• Become more comfortable using AWS and databases
+
+• Try to find more real life applications for projects I work on
+</Text>
                     </div>
                     <div className="carousel-page title">
-                        <h3>2</h3>
+                        <img className="project-image" src={project2}/>
                     </div>
                     <div className="carousel-page description">
                         <h3>20</h3>
                     </div>
                     <div className="carousel-page title">
-                        <h3>3</h3>
+                        <img className="project-image" src={project3}/>
                     </div>
                     <div className="carousel-page description">
                         <h3>30</h3>
                     </div>
                     <div className="carousel-page title">
-                        <h3>4</h3>
+                        <img className="project-image" src={project4}/>
                     </div>
                     <div className="carousel-page description">
                         <h3>40</h3>
                     </div>
                     <div className="carousel-page title">
-                        <h3>5</h3>
+                        <img className="project-image" src={project5}/>
                     </div>
                     <div className="carousel-page description">
                         <h3>50</h3>
                     </div>
                     <div className="carousel-page title">
-                        <h3>6</h3>
+                        <img className="project-image" src={project6}/>
                     </div>
                     <div className="carousel-page description">
                         <h3>60</h3>
